@@ -1,1 +1,58 @@
+@font-face {
+  font-family: Inter-Bold;
+  src: url("../src/assets/fonts/InterTight-Bold.ttf");
+}
+
+@font-face {
+  font-family: Inter-ExtraBold;
+  src: url("../src/assets/fonts/InterTight-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Inter-ExtraLight;
+  src: url("../src/assets/fonts/InterTight-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: Inter-Italic;
+  src: url("../src/assets/fonts/InterTight-Italic.ttf");
+}
+
+@font-face {
+  font-family: Inter-Light;
+  src: url("../src/assets/fonts/InterTight-Light.ttf");
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  src: url("../src/assets/fonts/InterTight-Medium.ttf");
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  src: url("../src/assets/fonts/InterTight-Regular.ttf");
+}
+
+@font-face {
+  font-family: Inter-SemiBold;
+  src: url("../src/assets/fonts/InterTight-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Inter-Thin;
+  src: url("../src/assets/fonts/InterTight-Thin.ttf");
+}
+
 @import "tailwindcss";
+
+@theme {
+  --font-inter-bold: Inter-Bold, "sans-serif";
+  --font-inter-extrabold: Inter-ExtraBold, "sans-serif";
+  --font-inter-extralight: Inter-ExtraLight, "sans-serif";
+  --font-inter-italic: Inter-Italic, "sans-serif";
+  --font-inter-light: Inter-Light, "sans-serif";
+  --font-inter-medium: Inter-Medium, "sans-serif";
+  --font-inter: Inter-Regular, "sans-serif";
+  --font-inter-semibold: Inter-SemiBold, "sans-serif";
+  --font-inter-thin: Inter-Thin, "sans-serif";
+}
