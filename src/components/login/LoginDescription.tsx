@@ -22,7 +22,7 @@ export default function LoginDescription() {
 
     <div className="flex flex-col space-y-2">
       <TextAnimate className="text-4xl font-extrabold" animation="blurInUp" by="character" once>Who Am Ai?</TextAnimate>
-      <span className="text-lg text-balance">This is just a mild project I wanted to work on for a while now. It's essentially a simple quiz game about me, just populated with an abundance of unnecessary features.</span>
+      <span className="text-md lg:text-lg lg:text-balance">This is just a mild project I wanted to work on for a while now. It's essentially a simple quiz game about me, just populated with an abundance of unnecessary features.</span>
     </div>
 
     <AvatarCircles className="flex justify-end" numPeople={12} avatarUrls={avatars} />
