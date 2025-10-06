@@ -51,7 +51,7 @@ export default function LoginForm() {
 
       <div className="flex gap-x-4 justify-center">
         {socials.map((link, index) => (
-          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="hover:text-purple-500 transition-colors">{link.icon}</a>
+          <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="text-black hover:text-slate-500 transition-colors duration-250">{link.icon}</a>
         ))}
       </div>
     </div>
