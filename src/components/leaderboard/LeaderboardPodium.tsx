@@ -7,7 +7,7 @@ type LeaderboardCardProps = {
   rank: 1 | 2 | 3;
 };
 
-export default function LeaderboardCard({ name, role, score, date, image, rank}: LeaderboardCardProps) {
+export default function LeaderboardPodium({ name, role, score, date, image, rank}: LeaderboardCardProps) {
 
   const styleMap = {
     1: {
@@ -32,17 +32,17 @@ export default function LeaderboardCard({ name, role, score, date, image, rank}:
 
   const { border, bg, circle, text } = styleMap[rank];
   const isTop1 = rank === 1;
-  const cardPaddingTop = isTop1 ? "pt-26" : "pt-30";
-  const emojiSize = isTop1 ? "text-4xl" : "text-3xl";
-  const gapY = isTop1 ? "gap-y-3" : "gap-y-1";
-  const profileSize = isTop1 ? "size-28" : "size-24";
-  const crownOffset = isTop1 ? "-top-26" : "-top-20";
-  const profileOffset = isTop1 ? "-top-14" : "-top-10";
+  const cardPaddingTop = isTop1 ? "pt-28 lg:pt-22" : "pt-30";
+  const emojiSize = isTop1 ? "text-3xl lg:text-5xl" : "text-3xl";
+  const gapY = isTop1 ? "gap-y-4 lg:gap-y-6" : "gap-y-2";
+  const profileSize = isTop1 ? "size-20 lg:size-28" : "size-18 lg:size-24";
+  const crownOffset = isTop1 ? "-top-22 lg:-top-29" : "-top-20";
+  const profileOffset = isTop1 ? "-top-12 lg:-top-14" : "-top-10";
 
   return (
   <div className="flex justify-center items-center cursor-default">
   <div className={cardPaddingTop}>
-  <div className={`relative flex flex-col items-center max-w-[14rem] w-[14rem] px-8 pt-10 pb-8 rounded-2xl shadow-xl ${bg} border-[0.15rem] ${border}`} >
+  <div className={`relative flex flex-col items-center max-w-[7.2rem] lg:max-w-[14rem] w-[14rem] pt-1 lg:pt-10 pb-4 lg:pb-8 rounded-2xl shadow-xl ${bg} border-[0.15rem] ${border}`} >
     {isTop1 && <div className={`absolute select-none ${crownOffset} ${emojiSize}`}>👑</div>}
 
     <div className={`absolute ${profileOffset}`}>
@@ -56,12 +56,12 @@ export default function LeaderboardCard({ name, role, score, date, image, rank}:
 
     <div className={`flex flex-col items-center ${gapY} mt-12 font-inter`}>
       <div className="flex flex-col items-center tracking-wider">
-        <span className="text-xl font-inter-semibold truncate w-full text-center">{name}</span>
-        <span className="text-md font-inter-medium text-gray-500">{role}</span>
+        <span className="text-md lg:text-2xl font-inter-semibold truncate w-full text-center">{name}</span>
+        <span className="text-sm lg:text-lg font-inter-medium text-gray-500 truncate w-full text-center">{role}</span>
       </div>
 
-      <span className={`text-3xl font-inter-semibold ${text} tracking-wide`}>{score}</span>
-      <span className="text-md font-inter text-gray-400 tracking-wide">{date}</span>
+      <span className={`text-xl lg:text-3xl font-inter-semibold ${text} tracking-wide`}>{score}</span>
+      <span className="hidden lg:flex text-xs lg:text-lg font-inter text-gray-400 tracking-wide">{date}</span>
     </div>
   </div>
   </div>
